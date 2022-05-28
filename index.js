@@ -13,7 +13,7 @@ require("./startup/prod")(app);
 // p.then(() => {console.log("done")});
 // throw new Error("something failed during startup");
 
-const port = process.env.PORT || 3000;
+const port = process.env.MONGODB_URI || 3000;
 let server = app.listen(port, () => winston.info(`Listening on port ${port}...`));
 
 module.exports = server;
